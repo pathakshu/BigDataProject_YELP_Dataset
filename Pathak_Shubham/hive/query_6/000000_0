@@ -1,0 +1,12 @@
+zriel,21,59,26
+zoie,5,61,5
+zanna,4,21,17
+z,0,0,0
+yummy,0,0,0
+your,3,20,0
+yoko,7,50,37
+yeonhee,0,0,0
+xtina,42,113,50
+xoxx,4,5,4
+
+insert overwrite directory select uname, uv, fv, cv from usert order by uname DESC limit 10;

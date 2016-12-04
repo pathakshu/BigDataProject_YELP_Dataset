@@ -1,0 +1,16 @@
+Caroline.9
+Graham.8
+Jennifer.8
+Kieran.8
+Chad.7
+Chad.7
+Rob.7
+Kerri.7
+Chad.7
+Tricia.6
+
+insert overrite directory 'hdfs:///hive_out10/' select uname, uv from usert order by uv DESC LIMIT 10;
+
+insert ovveride directory 'hdfs:///hive_out11/' select b.bname, r.uv,r.cv,r.fv from business b JOIN reviews r on (b.bid=r.bid);
+
+

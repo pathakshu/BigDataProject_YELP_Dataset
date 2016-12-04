@@ -1,0 +1,27 @@
+Sadie,3.51,0
+Chris,3.51,1
+Holly,3.51,1
+Holly,3.51,1
+Charles,3.51,0
+Andrew,3.52,0
+Gerald,3.52,0
+Gerald,3.52,1
+Andrew,3.52,0
+Andrew,3.52,0
+MScott,3.52,1
+Gerald,3.52,1
+Gerald,3.52,1
+Gerald,3.52,0
+Tri,3.52,1
+Gerald,3.52,0
+Saleem,3.52,0
+Arielle,3.52,0
+Gerald,3.52,0
+Gerald,3.52,1
+Gerald,3.52,0
+Lima Beans,3.53,0
+Lima Beans,3.53,0
+Lima Beans,3.53,3
+Morgan And Brian,3.53,0
+
+insert overwrite local directory 'hdfs:///hive_out15/' select u.uname,u.avgstars, r.uv from usert u JOIN reviews r on (u.uid=r.uid) where u.avgstars>3.5 orderby avgstars limit 20; 

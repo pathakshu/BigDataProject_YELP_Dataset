@@ -1,0 +1,12 @@
+Earl of Sandwich,NV,3984
+Serendipity 3,NV,3007
+ARIA Hotel & Casino,NV,2440
+XS Nightclub,NV,2302
+Hash House A Go Go,NV,2110
+Planet Hollywood Las Vegas Resort & Casino,NV,1714
+InterContinental Alliance Resorts THE PALAZZO,NV,1507
+Vdara Hotel,NV,1469
+Studio B,NV,1428
+Cirque du Soleil - The Beatles LOVE,NV,1397
+
+insert overwrite directory 'hdfs:///hive_out3/' select bname, state, total_reviews where state="NV" from business order by total_reviews DESC LIMIT 10;

@@ -1,0 +1,12 @@
+Ken,15144
+Phuong,13630
+Fancypants,9839
+Gourmet,9485
+Ann,8956
+Keiko,8218
+Jacob,6951
+Kathleen,6947
+Fenny,6876
+Santi,6764
+
+insert overwrite directory 'hdfs:///hive_out7/' select uname, review_count from usert orderby review_count DESC LIMIT 10;

@@ -1,0 +1,27 @@
+megan,215,1,3,8
+Caroline,168,5,2,2
+Caroline,168,3,2,3
+Caroline,168,3,4,2
+Caroline,168,9,8,8
+Jordan,137,3,1,0
+Dee,111,2,1,0
+Dee,111,2,1,0
+Cassie,95,1,1,0
+Cassie,95,1,0,0
+Alexa,78,2,2,1
+Lisa,74,1,0,0
+Shanna,69,3,1,3
+Shanna,69,1,2,0
+Shanna,69,2,2,1
+Chad,68,6,1,0
+Chad,68,2,2,0
+Chad,68,0,0,0
+Chad,68,2,2,0
+Chad,68,0,1,0
+Chad,68,0,0,0
+Chad,68,1,0,0
+Chad,68,2,0,1
+Chad,68,5,1,1
+Chad,68,1,0,0
+
+insert overwrite directory 'hdfs:///hive_out17/' select u.name,u.fans,r.uc,r.cv,r.fv from usert u JOIN reviews r on (u.uid=r.uid) order by u.fans DESC limit 25;

@@ -1,0 +1,28 @@
+Earl of Sandwich,3984
+Serendipity 3,3007
+ARIA Hotel & Casino,2440
+XS Nightclub,2302
+Hash House A Go Go,2110
+Planet Hollywood Las Vegas Resort & Casino,1714
+InterContinental Alliance Resorts THE PALAZZO,1507
+Vdara Hotel,1469
+Studio B,1428
+Cirque du Soleil - The Beatles LOVE,1397
+SUSHISAMBA - Las Vegas,1264
+Encore,1211
+Hot N Juicy Crawfish,1142
+The Buffet at ARIA,1125
+Trump Hotel,1086
+LAVO Italian Restaurant & Lounge,1069
+Mr. Mama's,1065
+Joe's Seafood Prime Steak & Stone Crab,1023
+Julian Serrano,990
+Charlotte Douglas International Airport,983
+MIX,933
+Gallo Blanco,924
+The Mission,908
+BLT Burger,908
+Texas de Brazil,885
+
+insert overwrite directory 'hdfs:///hive_out2/' select bname, total_reviews from business order by total_reviews DESC LIMIT 25;
+

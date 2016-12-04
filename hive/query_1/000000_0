@@ -1,0 +1,12 @@
+Julian Serrano,Las Vegas,-115.175766,36.10846,990 
+U.S. Egg,Phoenix,-112.06845,33.637367,99 
+Five Guys Burgers and Fries,Mesa,-111.75459,33.38057,99 
+Sauce Pizza & Wine,Scottsdale,-111.92627,33.61746,99 
+Yama Asian Fusion,Charlotte,-80.82398,35.157032,99 
+California Pizza Kitchen,Las Vegas,-115.15054,36.083168,99 
+Nogales Hot Dogs,Phoenix,-112.03936,33.49437,99 
+Smeeks,Phoenix,-112.02721,33.51021,99 
+Fran's Filling Station,Charlotte,-80.851906,35.197716,99 
+Benjarong Authentic Thai Cuisine,Las Vegas,-115.27956,36.053383,99 
+
+insert overwrite directory 'hdfs:///hive_out1/' select bname, city, longitute, latitude, total_reviews from business where state = "PA" order by total_reviews DESC LIMIT 10;
